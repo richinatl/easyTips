@@ -1,13 +1,8 @@
 //Calculate Tip
-function calculate ()
-    var totalBill = .value
-    var tipPercentage = .value
-    var numGuests = .value
-
-    //make sure valid values are entered
-    if (totalBill === "") {alert("Enter Amount")}; return;
-    if (tipPercentage === "") {alert("Enter Amount")}; return;
-    if (numGuests === "") {alert ("Enter Amount")}; return;
+function calculate () {
+    var totalBill = document.getElementById("total").value;
+    var tipPercentage = document.getElementById("serviceQual").value;
+    var numGuests = document.getElementById("peopleamt").value;
 
     //Calculate
     var tipTotal = (totalBill * tipPercentage) / numGuests;
@@ -19,3 +14,9 @@ function calculate ()
     var tipTotal.toFixed(2);
 
     //display
+    document.getElementById("totalTip").style.display = "none";
+
+    //button
+    document.getElementById("each").onclick = function () {calculateTip();};
+
+}
