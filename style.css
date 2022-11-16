@@ -121,6 +121,7 @@
 }
 
 .btn__container {
+    align-self: center;
     margin-top: 3rem;
 }
 
@@ -138,10 +139,17 @@ background: #3a8ffd;
 }
 
 .form {
+    display: flex;
+    flex-direction:column;
     margin-bottom: 5rem;
 }
 
+.form__container {
+   width: 40vw;
+}
+
 .tip__div {
+    align-self: center;
     font-size: 2.5rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
