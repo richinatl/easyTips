@@ -1,21 +1,14 @@
 //Calculate Tip
-function calculate ()
-    var totalBill = .value
-    var tipPercentage = .value
-    var numGuests = .value
-
-    //make sure valid values are entered
-    if (totalBill === "") {alert("Enter Amount")}; return;
-    if (tipPercentage === "") {alert("Enter Amount")}; return;
-    if (numGuests === "") {alert ("Enter Amount")}; return;
-
-    //Calculate
-    var tipTotal = (totalBill * tipPercentage) / numGuests;
+function calculateTip() {
+    let billAmt = document.getElementById("total").value;
+    let serviceQual = document.getElementById("serviceQual").value;
+    let numOfPeople = document.getElementById("peopleamt").value
+    let total = (billAmt * serviceQual) / numOfPeople;
+    total = Math.round(total * 100) / 100;
+    total = total.toFixed(2);
     
-    //round to two decimal places
-    var tipTotal = Math.round (tipTotal*100)/100;
-
-    //make sure it always has two decimal places
-    var tipTotal.toFixed(2);
-
-    //display
+    
+    //Display the tip
+    document.getElementById("totalTip").style.display = "block";
+    document.getElementById("tip").innerHTML = total;}
+    document.getElementById("calculate").onclick = function() {calculateTip();};
