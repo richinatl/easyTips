@@ -20,7 +20,7 @@
 
 
   ## Description
-  A tip calculator using javaScript, HTML, and CSS
+  A tip calculator using javaScript, HTML, and CSS. Find the deployed page here https://richinatl.github.io/easyTips/
   ## Installation
   NA
   ## Usage
