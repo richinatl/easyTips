@@ -27,11 +27,11 @@
     font-size: 62.5%;
   }
   
-  img {
+  /* img {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
-  }
+  } */
   
   body {
     font-family: Inter, Arial, Helvetica, sans-serif;
@@ -50,6 +50,7 @@
   
   h1 {
     font-size: 6rem;
+    text-shadow: 2px 2px 20px #fff;
   }
   
   h2 {
@@ -73,7 +74,7 @@
   
     h1 {
       font-size: 8rem;
-    }
+     }
   
     h2 {
       font-size: 4rem;
@@ -89,10 +90,22 @@
     text-decoration: none;
   }
 
-
+label {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: .2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px var(--color-headings);
+}
 /*layout for app container*/
 
 .card {
+    background-image: url('./images/tipBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover; 
     border-radius: 15px;
     align-items: center;
     box-shadow: 0 0 20px 10px #f3f3f3;
@@ -102,6 +115,7 @@
     margin-top: 2rem;
     overflow: hidden;
     padding: 5rem;
+  
 }
 
     /*button */
@@ -113,26 +127,42 @@
     font-size: 1.8rem;
     font-weight: 600;
     margin: 1rem 0;
+    width: 12rem;
     outline: 0;
-    padding: 2rem 4vw;
+    padding: 1.5rem;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
+    letter-spacing: .1rem;
 }
 
 .btn__container {
-    align-self: center;
+    display: flex;
+    flex-direction: column;
     margin-top: 3rem;
 }
 
 .btn--primary {
-    background: var(--color-primary);
+    background-color: var(--color-primary);
     color: #fff;
 }
 
 .btn--primary:hover {
-background: #3a8ffd;
+    background-color: var(--color-secondary);
+    transition: background-color 0.5s ease-in;
 }
+
+.btn--secondary {
+    background-color: var(--color-accent);
+    color: #fff;
+}
+
+.btn--secondary:hover {
+    opacity: 0.8;
+    transition: opacity 0.5s ease-in;
+}
+
+/*Spacing, layout, aesthetics*/
 
 .card__heading {
     margin-bottom: 5rem;
@@ -141,6 +171,7 @@ background: #3a8ffd;
 .form {
     display: flex;
     flex-direction:column;
+    align-items: center;
     margin-bottom: 5rem;
 }
 
@@ -148,9 +179,25 @@ background: #3a8ffd;
    width: 40vw;
 }
 
+.input {
+    border: #1b0760;
+    border-radius: 10px;
+    height: 3rem;
+    width: 33vw;
+    margin-bottom: 2rem;
+    text-indent: 1rem;
+}
+
+@media screen and (min-width:1024px) {
+    .input {
+        width:25vw;
+    }
+}
+
 .tip__div {
     align-self: center;
-    font-size: 2.5rem;
+    color: var(--color-primary);
+    font-size: 4rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
